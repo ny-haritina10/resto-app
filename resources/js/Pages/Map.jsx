@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head, useForm } from '@inertiajs/react';
-import MapComponent from '@/Components/MapComponent';
+import MapComponent from '@/Components/Map/MapComponent';
 import InputLabel from '@/Components/InputLabel';
 import TextInput from '@/Components/TextInput';
 import InputError from '@/Components/InputError';

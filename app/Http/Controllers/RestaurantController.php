@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Restaurant;
+use App\Models\Resto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+
+use Inertia\Inertia;
 
 class RestaurantController extends Controller
 {
@@ -25,5 +28,10 @@ class RestaurantController extends Controller
 
         Restaurant::create($validated);
         return Redirect::route('restaurants.index')->with('success', 'Restaurant added successfully.');
+    }
+
+    public function restoIndex()
+    {
+        return Inertia::render('Resto');            /* point to resources/js/Pages */
     }
 }

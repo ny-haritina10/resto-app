@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
-import Alert from './Alert';
+import Alert from '../Alert';
 
 export default function MapComponent({ onClick, restaurants }) {
     const { isLoaded } = useLoadScript({

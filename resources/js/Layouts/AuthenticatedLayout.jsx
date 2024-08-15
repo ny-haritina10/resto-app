@@ -28,6 +28,12 @@ export default function Authenticated({ user, header, children }) {
                                 <NavLink href={route('restaurants.index')} active={route().current('restaurants.index')}>
                                     Map
                                 </NavLink>
+
+
+                                {/* New NavLink for accessing the Resto page */}
+                                <NavLink href={route('resto.index')} active={route().current('resto.index')}>
+                                    Restaurants
+                                </NavLink>
                             </div>
                         </div>
 
@@ -102,6 +108,11 @@ export default function Authenticated({ user, header, children }) {
 
                         <ResponsiveNavLink href={route('restaurants.index')} active={route().current('restaurants.index')}>
                             Map
+                        </ResponsiveNavLink>
+
+                        {/* New NavLink for accessing the Resto page */}
+                        <ResponsiveNavLink href={route('resto.index')} active={route().current('resto.index')}>
+                            Resto
                         </ResponsiveNavLink>
                     </div>
 

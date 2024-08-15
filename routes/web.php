@@ -38,6 +38,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/map', [RestaurantController::class, 'index'])->name('restaurants.index');
     Route::post('/restaurants', [RestaurantController::class, 'store'])->name('restaurants.store');
+
+    Route::get('/resto', [RestaurantController::class, 'restoIndex'])->name('resto.index');
 });
 
 require __DIR__.'/auth.php';
