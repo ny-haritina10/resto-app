@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from '@inertiajs/react';
 
 const RestoList = () => {
     const [restos, setRestos] = useState([]);
@@ -63,7 +64,9 @@ const RestoList = () => {
                                         className="p-2 dark:bg-gray-700 dark:text-white w-full"
                                     />
                                 ) : (
-                                    resto.name
+                                    <Link href={`/restaurants/${resto.id}/dishes`} className="text-blue-500 hover:underline">
+                                        {resto.name}
+                                    </Link>
                                 )}
                             </td>
 

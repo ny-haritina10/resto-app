@@ -9,6 +9,7 @@ import PrimaryButton from '@/Components/PrimaryButton';
 import Alert from '@/Components/Alert';
 
 export default function Map({ auth, restaurants  }) {       // retreieve `restaurants` from Controller as a props
+    
     const { data, setData, post, errors } = useForm({
         name: '',
         x: '',

@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestaurantController;
-use App\Http\Controllers\MapController;
+use App\Http\Controllers\DishController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -40,6 +40,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/restaurants', [RestaurantController::class, 'store'])->name('restaurants.store');
 
     Route::get('/resto', [RestaurantController::class, 'restoIndex'])->name('resto.index');
+
+    Route::get('restaurants/{restaurant}/dishes', [DishController::class, 'index'])->name('dishes.index');
+    Route::post('restaurants/{restaurant}/dishes', [DishController::class, 'store'])->name('dishes.store');
+    Route::get('dishes/{dish}', [DishController::class, 'show'])->name('dishes.show');
+    Route::put('dishes/{dish}', [DishController::class, 'update'])->name('dishes.update');
+    Route::delete('dishes/{dish}', [DishController::class, 'destroy'])->name('dishes.destroy');
 });
 
 require __DIR__.'/auth.php';
