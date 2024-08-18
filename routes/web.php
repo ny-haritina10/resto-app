@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\DishController;
@@ -47,5 +48,7 @@ Route::middleware('auth')->group(function () {
     Route::put('dishes/{dish}', [DishController::class, 'update'])->name('dishes.update');
     Route::delete('dishes/{dish}', [DishController::class, 'destroy'])->name('dishes.destroy');
 });
+
+Route::get('/client', [ClientController::class,'index'])->name('client.index');
 
 require __DIR__.'/auth.php';
