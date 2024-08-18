@@ -6,61 +6,102 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+# Restaurant Mapping Application
 
-## About Laravel
+This project is a full-stack web application developed with Laravel Breeze for the backend and React for the frontend. The application features a back office for managing restaurants and their menus, as well as a front office where clients can interact with a map to find nearby restaurants.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Back Office
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. **Add Restaurants using Google Maps**
+    - Click on the map to select a location.
+    - Retrieve the coordinates of the selected point.
+    - Add a name and an image for the restaurant.
+    - Upload an image for the restaurant.
+    - Save the restaurant to the database.
 
-## Learning Laravel
+2. **Manage Restaurants**
+    - View a list of all restaurants.
+    - Perform basic CRUD operations (Create, Read, Update, Delete) on restaurants.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. **Manage Restaurant Menus**
+    - Each restaurant can have its own menu.
+    - Perform CRUD operations on the menu items.
+    - Example: Restaurant A may offer Pizza, Ice Cream, Cake, etc.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Front Office
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Client Position Registration**
+    - Clients can register their current position using the map.
+    - Click on the map to select their current location.
 
-## Laravel Sponsors
+2. **View Restaurants on the Map**
+    - Only the restaurants near the current position are displayed on the map.
+    - Hovering over an icon displays details about the restaurant.
+    - Clicking on an icon shows further details about the restaurant.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Getting Started
 
-### Premium Partners
+### Prerequisites
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- PHP
+- Laravel
+- Node.js
+- MySQL (or another database supported by Laravel)
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/ny-haritina10/resto-app.git
+    cd your-repo-name
+    ```
+
+2. Install backend dependencies:
+    ```bash
+    composer install
+    ```
+
+3. Install frontend dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Set up your `.env` file by copying the example:
+    ```bash
+    cp .env.example .env
+    ```
+
+5. Generate an application key:
+    ```bash
+    php artisan key:generate
+    ```
+
+6. Set up your database and run migrations:
+    ```bash
+    php artisan migrate
+    ```
+
+7. Start the Laravel development server:
+    ```bash
+    php artisan serve
+    ```
+
+8. Start the React development server:
+    ```bash
+    npm run dev
+    ```
+
+### Usage
+
+- Access the back office to manage restaurants and their menus.
+- Use the front office to register client positions and view nearby restaurants.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Feel free to contribute by creating a pull request or opening an issue.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License.
